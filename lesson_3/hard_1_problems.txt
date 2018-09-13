@@ -1,0 +1,53 @@
+- QUESTION 1 -
+The 'greeting' variable will be initialized to 'nil' even though the conditional statement isn't executed. If there was no 'if' statement the program would raise an error for the uninitialized variable.
+
+- QUESTION 2 - 
+{:a => "hi there"}
+
+- QUESTION 3 -
+A)
+=> one
+=> two
+=> three
+
+B)
+=> one
+=> two 
+=> three
+
+C)
+=> two 
+=> three
+=> one
+
+- QUESTION 4 -
+def dot_separated_ip_address?(input_string)
+  dot_separated_words = input_string.split(".")
+
+  if dot_separated_words.size == 4
+    while dot_separated_words.size > 0 do
+      word = dot_separated_words.pop
+      if !is_an_ip_number?(word)
+        return false
+        break
+      else
+        true
+      end
+    end
+  else
+    false
+  end
+end
+
+**LAUNCH SCHOOL SOLUTION**
+def dot_separated_ip_address?(input_string)
+  dot_separated_words = input_string.split(".")
+  return false unless dot_separated_words.size == 4
+
+  while dot_separated_words.size > 0 do
+    word = dot_separated_words.pop
+    return false unless is_an_ip_number?(word)
+  end
+
+  true
+end

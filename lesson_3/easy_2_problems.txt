@@ -1,0 +1,38 @@
+- QUESTION 1 -
+ages.key?('Spot')
+ages.include?('Spot')
+ages.has_key?('Spot')
+ages.member?('Spot')
+
+- QUESTION 2 -
+munsters_description.capitalize!  => "The munsters are creepy in a good way."
+munsters_description.swapcase!    => "tHE mUNSTERS ARE CREEPY IN A GOOD WAY."
+munsters_description.downcase!    => "the munsters are creepy in a good way."
+munsters_description.upcase!      => "THE MUNSTERS ARE CREEPY IN A GOOD WAY."
+
+- QUESTION 3 -
+ages.merge!(additional_ages)
+
+- QUESTION 4 -
+advice.include?('Dino')
+or 
+advice.match('Dino)
+
+- QUESTION 5 - 
+flintstones = %w(Fred Barney Wilma Betty BamBam Pebbles)
+
+- QUESTION 6 -
+flintstones << 'Dino'
+
+- QUESTION 7 - 
+flintstones.push('Dino', 'Hoppy')
+
+- QUESTION 8 -
+advice.slice!(0, advice.index('house'))
+
+- QUESTION 9 -
+statement.count('t')
+
+- QUESTION 10 -
+title.center(40)
+

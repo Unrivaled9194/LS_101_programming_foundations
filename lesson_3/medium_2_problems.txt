@@ -1,0 +1,36 @@
+- QUESTION 1 -
+12: a_outer is          42        => ID is  'first_id'
+20: a_outer_inner_id is 42        => ID is  'first_id'
+25: a_outer is          42        => ID is  'first_id'
+32: a_outer is          22        => ID is  'second_id'
+37: a_outer is          22        => ID was 'first_id' now 'second_id'
+45: a_inner is          22        => ID is  'second_id' 
+55: a_inner is          22        => ID is  'second_id'  => a_outer ID is 'second_id'
+63: a_outer is          22        => ID was 'first_id' now 'second_id'
+70: a_inner is unusable because it was created inside the block
+
+- QUESTION 2-
+- a_outer value and object_id will not change after the method call because of the re-assignment in the method. 
+- a_inner is not accessible within the 'fun_with_ids' method because it is scoped within the second method.
+
+- QUESTION 3 -
+My string looks like this now: pumpkins
+My array looks like this now:["pumpkins", "rutabaga"]
+# The string stays the same because the parameter passed is assigned to a new variable and # then re-assigned to a new object, never affecting the original object.
+# The array changes because the method uses a mutating operation: '<<'. This doesn't          # re-assign the method variable to a new object but instead changes the original array    # object. 
+
+- QUESTION 4 -
+My string looks like this now: pumpkinsrutabaga
+My array looks like this now: ["pumpkins"]
+# Same as question 3 above but reversed. The '=' operator doesn't mutate it re-assigns.
+
+- QUESTION 5 -
+def color_valid(color)
+  color == "blue" || color == "green"
+end
+
+puts color_valid('red')
+
+
+
+
